@@ -13,6 +13,10 @@ body {
     position: relative;
 }
 
+.game {
+    /* display: none; */
+}
+
 .content {
     padding: 50px;
 }
@@ -40,4 +44,26 @@ body {
 
 .result {
     display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+.result h1 {
+    font-size: 50px;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+.play {
+    color: white;
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
 }
