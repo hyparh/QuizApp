@@ -1,34 +1,4 @@
-const data = [
-    {
-        id: 1,
-        question: "Which of these telescopes is Shmidth-Cassegrain?",
-        answers: [
-            { answer: "GSO 12\"", isCorrect: false },
-            { answer: "Celestron C11", isCorrect: true },
-            { answer: "14\" flexi-tube", isCorrect: false },
-            { answer: "80ED APO", isCorrect: false },
-        ],
-    },
-    {
-        id: 2,
-        question: "Which planet moon has active volcanoes?",
-        answers: [
-            { answer: "Titan", isCorrect: false },
-            { answer: "Europa", isCorrect: false },
-            { answer: "Io", isCorrect: true },
-            { answer: "Ganymede", isCorrect: false },
-        ],
-    },
-    {
-        id: 1,
-        question: "Which planet is biggest in our Solar system?",
-        answers: [
-            { answer: "Jupiter", isCorrect: false },
-            { answer: "Saturn", isCorrect: true },
-            { answer: "Venus", isCorrect: false },
-        ],
-    },
-];
+import { data } from "./database.js";
 
 const gameScreen = document.querySelector(".game");
 const resultScreen = document.querySelector(".result");
@@ -43,9 +13,28 @@ let wrongCount = 0;
 let total = 0;
 let selectedAnswer;
 
+const playAgain = () => {
+    qIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+    total = 0;
+    showQuestion(qIndex);
+}
+
+play.addEventListener("click", () => {
+    resultScreen.style.display = "none";
+    gameScreen.style.display = "block";
+
+    playAgain();
+});
+
 const showResult = () => {
     resultScreen.style.display = "block";
     gameScreen.style.display = "none";
+
+    resultScreen.querySelector(".correct").textContent = `Correct answers: ${correctCount}`;
+    resultScreen.querySelector(".wrong").textContent = `Wrong answers: ${wrongCount}`;
+    resultScreen.querySelector(".score").textContent = `Score: ${correctCount * 10}`;
 };
 
 const showQuestion = (qNumber) => {
