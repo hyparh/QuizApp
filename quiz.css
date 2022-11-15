@@ -9,7 +9,7 @@ body {
 .container {
     width: 800px;
     height: 500px;
-    background-color: white;
+    background-color: #cccccc;
     position: relative;
 }
 
@@ -28,10 +28,11 @@ body {
 .answer {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #0000b3;
 }
 
 .submit {
+    font-size: 20px;
     background-color: rebeccapurple;
     color: white;
     border: none;
@@ -61,6 +62,8 @@ body {
 }
 
 .play {
+    font-size: 20px;
+    border-radius: 6px;
     color: white;
     background-color: rebeccapurple;
     padding: 10px 20px;

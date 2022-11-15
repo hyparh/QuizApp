@@ -1,7 +1,7 @@
 export const data = [
     {
         id: 1,
-        question: "Which of these telescopes is Shmidth-Cassegrain?",
+        question: "Which of these telescopes is Shmidth-Cassegrain design?",
         answers: [
             { answer: "GSO 12\"", isCorrect: false },
             { answer: "Celestron C11", isCorrect: true },
@@ -26,6 +26,15 @@ export const data = [
             { answer: "Jupiter", isCorrect: true },
             { answer: "Saturn", isCorrect: false },
             { answer: "Venus", isCorrect: false },
+        ],
+    },
+    {
+        id: 4,
+        question: "How much maximum optical magnification provides 200mm aperture?",
+        answers: [
+            { answer: "100x", isCorrect: false },
+            { answer: "300x", isCorrect: false },
+            { answer: "400x", isCorrect: true },
         ],
     },
 ];
