@@ -32,6 +32,18 @@ const showResult = () => {
     resultScreen.style.display = "block";
     gameScreen.style.display = "none";
 
+    if (wrongCount === 0) {
+        resultScreen.querySelector(".greeting").textContent = "Excellent!"
+    } else if (correctCount > wrongCount) {
+        resultScreen.querySelector(".greeting").textContent = "Very good!"
+    } else if(correctCount === wrongCount) {
+        resultScreen.querySelector(".greeting").textContent = "Good!"
+    } else if(correctCount < wrongCount && correctCount > 0) {
+        resultScreen.querySelector(".greeting").textContent = "You can do better!"
+    } else if(correctCount === 0) {
+        resultScreen.querySelector(".greeting").textContent = "Well... you can always try again!"
+    };
+
     resultScreen.querySelector(".correct").textContent = `Correct answers: ${correctCount}`;
     resultScreen.querySelector(".wrong").textContent = `Wrong answers: ${wrongCount}`;
     resultScreen.querySelector(".score").textContent = `Score: ${correctCount * 10}`;
