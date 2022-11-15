@@ -37,4 +37,23 @@ export const data = [
             { answer: "400x", isCorrect: true },
         ],
     },
+    {
+        id: 5,
+        question: "Which planet has The Great Red Spot?",
+        answers: [
+            { answer: "Venus", isCorrect: false },
+            { answer: "Mars", isCorrect: false },
+            { answer: "Jupiter", isCorrect: true },
+            { answer: "Uranus", isCorrect: false },
+        ],
+    },
+    {
+        id: 6,
+        question: "Which planet is the hottest one?",
+        answers: [
+            { answer: "Mercury", isCorrect: false },
+            { answer: "Venus", isCorrect: true },
+            { answer: "Earth", isCorrect: true },
+        ],
+    },
 ];
